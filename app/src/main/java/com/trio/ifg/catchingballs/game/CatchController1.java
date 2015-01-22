@@ -9,16 +9,20 @@ import com.trio.ifg.catchingballs.engine.GameController;
 /**
  * Created by Haney on 07/01/2015.
  */
-public class CatchController extends GameController {
+public class CatchController1 extends GameController {
 
     //criar os objetos de jogo aqui
     private Fundo fundo;
 
-    public CatchController(Context context) {
+    public CatchController1(Context context) {
         super(context);
 
         //inicializar os objetos
         fundo = new Fundo(context, 0, 0);
+    }
+
+    public CatchController1(Context context, int vidas, int velocidade) {
+        super(context, vidas, velocidade);
     }
 
     @Override

@@ -5,18 +5,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.trio.ifg.catchingballs.R;
-import com.trio.ifg.catchingballs.game.CatchController;
+import com.trio.ifg.catchingballs.game.CatchController1;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    private CatchController catchC;
+    private CatchController1 catchC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        catchC = new CatchController(this);
+        catchC = new CatchController1(this, 3, 5);
         setContentView(catchC);
     }
 
