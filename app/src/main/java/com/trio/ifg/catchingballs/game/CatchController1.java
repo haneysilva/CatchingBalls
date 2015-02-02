@@ -20,10 +20,11 @@ public class CatchController1 extends GameController {
     private ArrayList<Bola> listaDeBolas;
 
     public CatchController1(Context context) {
-        vidas = 3;
         super(context);
 
         //inicializar os objetos
+
+        vidas = 3;
         fundo = new Fundo(context, 0, 0);
         placar = new Placar(context, 0, 0);
         listaDeBolas = Fabrica.novaListaDeBolas();
@@ -33,10 +34,27 @@ public class CatchController1 extends GameController {
         super(context, vidas, velocidade);
     }
 
+
+
+    @Override
+    public void startController() {
+
+    }
+
+    public void stopController(){
+
+    }
+
+
     @Override
     public void stepObjects(Canvas canvas) {
 
         switch (vidas) {
+
+            case 0:
+                stopController();
+                break;
+
             case 1:
                 //desenhar 1 corações
                 break;
@@ -57,6 +75,8 @@ public class CatchController1 extends GameController {
                 //desenhar 5 corações
                 break;
 
+            default:
+                break;
         }
 
          //posicionar os objetos
@@ -71,6 +91,8 @@ public class CatchController1 extends GameController {
         fundo.draw(canvas);
         placar.draw(canvas, pontos);
     }
+
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

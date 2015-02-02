@@ -27,16 +27,20 @@ public abstract class GameController extends SurfaceView implements Runnable  {
         super(context);
         this.vidas = vidas;
         this.velocidade = velocidade;
+
+        startController();
     }
 
     public abstract void stepObjects(Canvas canvas);
     public abstract void drawObjects(Canvas canvas);
+    public abstract void startController();
 
     public void resume() {
 
         thread = new Thread(this);
         thread.start();
         running = true;
+
     }
 
     public void stop(){
