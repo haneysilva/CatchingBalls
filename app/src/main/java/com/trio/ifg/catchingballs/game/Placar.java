@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 
 import com.trio.ifg.catchingballs.engine.GameObject;
-import com.trio.ifg.catchingballs.engine.Pontos;
 
 /**
  * Created by aluno on 26/01/2015.
@@ -25,7 +24,12 @@ public class Placar extends GameObject {
 
     @Override
     public void draw(Canvas canvas) {
-
-        canvas.drawText(String.valueOf(Pontos.getPontos()), (float)x, (float)y, null);
+        //null
     }
+
+    public void draw(Canvas canvas, int pontos) {
+        canvas.drawText(String.valueOf(pontos), (float)x, (float)y, null);
+    }
+
+
 }

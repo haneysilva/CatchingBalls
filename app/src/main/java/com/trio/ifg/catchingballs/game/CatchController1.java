@@ -13,12 +13,15 @@ public class CatchController1 extends GameController {
 
     //criar os objetos de jogo aqui
     private Fundo fundo;
+    private Placar placar;
+    private int pontos;
 
     public CatchController1(Context context) {
         super(context);
 
         //inicializar os objetos
         fundo = new Fundo(context, 0, 0);
+        placar = new Placar(context, 0, 0);
     }
 
     public CatchController1(Context context, int vidas, int velocidade) {
@@ -30,6 +33,7 @@ public class CatchController1 extends GameController {
 
          //posicionar os objetos
         fundo.step(canvas);
+        placar.step(canvas);
     }
 
     @Override
@@ -37,12 +41,24 @@ public class CatchController1 extends GameController {
 
         //pintar os objetos
         fundo.draw(canvas);
+        placar.draw(canvas, pontos);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
 
+        boolean aux = false;
         //criar as interações de toque
+        //chamar os on touch de cada bola passando o event
+
+        return super.onTouchEvent(event);
+    }
+
+    public void adicionarPontos (int p) {
+        pontos = pontos + p;
+    }
+
+    public int getPontos() {
+        return pontos;
     }
 }

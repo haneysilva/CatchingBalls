@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.view.MotionEvent;
+
 import com.trio.ifg.catchingballs.R;
 import com.trio.ifg.catchingballs.engine.GameObject;
 
@@ -50,8 +52,16 @@ public class Bola extends GameObject {
         canvas.drawBitmap(imagem, x, y, null);
     }
 
-    public void onTouch() {
+    public boolean onTouch(MotionEvent event) {
 
-        //Criar aqui o que acontecerá com a bola quando ela for tocada
+        float xEvent = event.getX();
+        float yEvent = event.getY();
+
+        float xBottom = x + width;
+        float yBottom = y + height;
+
+        if((xEvent >= x && xEvent <= xBottom) && (yEvent >= y && yEvent <= yBottom)){
+            return true;
+        } else return false;
     }
 }
