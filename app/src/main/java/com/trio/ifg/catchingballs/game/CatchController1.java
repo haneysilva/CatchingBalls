@@ -6,6 +6,8 @@ import android.view.MotionEvent;
 
 import com.trio.ifg.catchingballs.engine.GameController;
 
+import java.util.ArrayList;
+
 /**
  * Created by Haney on 07/01/2015.
  */
@@ -15,6 +17,7 @@ public class CatchController1 extends GameController {
     private Fundo fundo;
     private Placar placar;
     private int pontos;
+    private ArrayList<Bola> listaDeBolas;
 
     public CatchController1(Context context) {
         super(context);
@@ -22,6 +25,7 @@ public class CatchController1 extends GameController {
         //inicializar os objetos
         fundo = new Fundo(context, 0, 0);
         placar = new Placar(context, 0, 0);
+        listaDeBolas = Fabrica.novaListaDeBolas();
     }
 
     public CatchController1(Context context, int vidas, int velocidade) {
