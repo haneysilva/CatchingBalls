@@ -14,8 +14,8 @@ public abstract class GameController extends SurfaceView implements Runnable  {
     private Thread thread;
     private boolean running = false;
     private SurfaceHolder holder;
-    private int vidas;
-    private int velocidade;
+    protected int vidas;
+    protected int velocidade;
 
     public GameController(Context context) {
         super(context);

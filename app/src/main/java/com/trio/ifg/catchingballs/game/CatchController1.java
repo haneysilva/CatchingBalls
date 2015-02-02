@@ -20,6 +20,7 @@ public class CatchController1 extends GameController {
     private ArrayList<Bola> listaDeBolas;
 
     public CatchController1(Context context) {
+        vidas = 3;
         super(context);
 
         //inicializar os objetos
@@ -34,6 +35,29 @@ public class CatchController1 extends GameController {
 
     @Override
     public void stepObjects(Canvas canvas) {
+
+        switch (vidas) {
+            case 1:
+                //desenhar 1 corações
+                break;
+
+            case 2:
+                //desenhar 2 corações
+                break;
+
+            case 3:
+                //desenhar 3 corações
+                break;
+
+            case 4:
+                //desenhar 4 corações
+                break;
+
+            case 5:
+                //desenhar 5 corações
+                break;
+
+        }
 
          //posicionar os objetos
         fundo.step(canvas);
