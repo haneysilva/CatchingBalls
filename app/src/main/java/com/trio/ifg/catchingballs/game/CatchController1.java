@@ -41,19 +41,30 @@ public class CatchController1 extends GameController {
 
     }
 
-    public void stopController(){
-
-    }
-
-
     @Override
     public void stepObjects(Canvas canvas) {
 
-        switch (vidas) {
+        if (vidas != 0) {
 
-            case 0:
-                stopController();
-                break;
+            //posicionar os objetos
+            fundo.step(canvas);
+            placar.step(canvas);
+
+        } else if (vidas == 0) {
+
+            //colocar a imagem que fala que o jogo acabou e qunado clicar nela
+            // iniciar o jogo novamente, ou retornar para a tela inicial
+        }
+    }
+
+    @Override
+    public void drawObjects(Canvas canvas) {
+
+        //pintar os objetos
+        fundo.draw(canvas);
+        placar.draw(canvas, pontos);
+
+        switch (vidas) {
 
             case 1:
                 //desenhar 1 corações
@@ -78,18 +89,6 @@ public class CatchController1 extends GameController {
             default:
                 break;
         }
-
-         //posicionar os objetos
-        fundo.step(canvas);
-        placar.step(canvas);
-    }
-
-    @Override
-    public void drawObjects(Canvas canvas) {
-
-        //pintar os objetos
-        fundo.draw(canvas);
-        placar.draw(canvas, pontos);
     }
 
 
