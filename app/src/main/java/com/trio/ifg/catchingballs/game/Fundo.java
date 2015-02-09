@@ -3,16 +3,21 @@ package com.trio.ifg.catchingballs.game;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
+import com.trio.ifg.catchingballs.R;
 import com.trio.ifg.catchingballs.engine.GameObject;
 
 /**
  * Created by Haney on 07/01/2015.
  */
 public class Fundo extends GameObject {
+    Bitmap imagem;
 
     public Fundo(Context context, int x, int y) {
         super(context, x, y);
+        imagem = BitmapFactory.decodeResource(getResources(), R.drawable.telateste);
     }
 
     @Override
