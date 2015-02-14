@@ -12,10 +12,10 @@ import com.trio.ifg.catchingballs.engine.GameObject;
 /**
  * Created by Haney on 07/01/2015.
  */
-public class Fundo extends GameObject {
+public class FundoInicio extends GameObject {
     Bitmap imagem;
 
-    public Fundo(Context context, int x, int y) {
+    public FundoInicio(Context context, int x, int y) {
         super(context, x, y);
         imagem = BitmapFactory.decodeResource(getResources(), R.drawable.telateste);
     }
@@ -28,6 +28,6 @@ public class Fundo extends GameObject {
     @Override
     public void draw(Canvas canvas) {
         //colocar os fundos aqui
-        canvas.drawColor(Color.BLACK);
+        canvas.drawBitmap(imagem, 0, 0, null);
     }
 }

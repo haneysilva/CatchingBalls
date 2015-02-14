@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class CatchController1 extends GameController {
 
     //criar os objetos de jogo aqui
-    private Fundo fundo;
+    private FundoInicio fundo;
     private Placar placar;
     private int pontos;
     private ArrayList<Bola> listaDeBolas;
@@ -25,7 +25,7 @@ public class CatchController1 extends GameController {
         //inicializar os objetos
 
         vidas = 3;
-        fundo = new Fundo(context, 0, 0);
+        fundo = new FundoInicio(context, 0, 0);
         placar = new Placar(context, 0, 0);
         listaDeBolas = Fabrica.novaListaDeBolas();
     }
