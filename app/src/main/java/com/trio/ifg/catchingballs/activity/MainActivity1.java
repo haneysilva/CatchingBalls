@@ -1,36 +1,31 @@
 package com.trio.ifg.catchingballs.activity;
 
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.trio.ifg.catchingballs.R;
-import com.trio.ifg.catchingballs.game.CatchController;
+import com.trio.ifg.catchingballs.game.InicioController;
 
+public class MainActivity1 extends ActionBarActivity {
 
-public class MainActivity extends ActionBarActivity {
-
-    private CatchController catchC;
+    private InicioController iController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        catchC = new CatchController(this);
-        setContentView(catchC);
+        iController = new InicioController(this);
+
+        setContentView(iController);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        catchC.resume();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main_activity1, menu);
         return true;
     }
 

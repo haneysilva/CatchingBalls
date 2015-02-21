@@ -7,38 +7,40 @@ import android.view.MotionEvent;
 import com.trio.ifg.catchingballs.engine.GameController;
 
 /**
- * Created by Haney on 07/01/2015.
+ * Created by Haney on 14/02/2015.
  */
-public class CatchController extends GameController {
+public class InicioController extends GameController {
 
-    //criar os objetos de jogo aqui
-    private Fundo fundo;
+    private FundoInicio fundo;
 
-    public CatchController(Context context) {
+    public InicioController(Context context) {
         super(context);
 
-        //inicializar os objetos
-        fundo = new Fundo(context, 0, 0);
+        fundo = new FundoInicio(context, 0, 0);
     }
 
     @Override
     public void stepObjects(Canvas canvas) {
 
-         //posicionar os objetos
-        fundo.step(canvas);
+        //o fundo sempre vai ser pintado no mesmo lugar
     }
 
     @Override
     public void drawObjects(Canvas canvas) {
 
-        //pintar os objetos
         fundo.draw(canvas);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
+    public void startController() {
 
-        //criar as interações de toque
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        //chamar a primeira fase
+
+        return super.onTouchEvent(event);
     }
 }

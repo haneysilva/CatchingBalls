@@ -4,5 +4,6 @@
     <string name="app_name">CatchingBalls</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main_activity1">MainActivity1</string>
 
 </resources>
