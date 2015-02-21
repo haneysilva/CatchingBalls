@@ -22,10 +22,10 @@ public class Bola extends GameObject {
 
     private int passoX = 4, passoY = 4;
 
-    public Bola(Context context, int x, int y) {
+    public Bola(Context context, int x, int y, int Idimage) {
         super(context, x, y);
 
-        imagem = BitmapFactory.decodeResource(getResources(), R.drawable.bola);
+        imagem = BitmapFactory.decodeResource(getResources(), Idimage);
         height = imagem.getHeight();
         width = imagem.getWidth();
     }
