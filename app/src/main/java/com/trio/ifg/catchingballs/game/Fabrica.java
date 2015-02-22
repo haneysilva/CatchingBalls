@@ -6,7 +6,7 @@ import com.trio.ifg.catchingballs.R;
 import com.trio.ifg.catchingballs.game.Bola;
 
 /**
- * Created by aluno on 02/02/2015.
+ * Created by Gustavo on 21/02/2015.
  */
 public class Fabrica {
 
