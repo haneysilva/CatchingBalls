@@ -13,7 +13,7 @@ import com.trio.ifg.catchingballs.R;
 import com.trio.ifg.catchingballs.engine.GameObject;
 
 /**
- * Created by Haney on 07/01/2015.
+ * Created by Gustavo on 21/02/2015.
  */
 public class Bola extends GameObject {
 
